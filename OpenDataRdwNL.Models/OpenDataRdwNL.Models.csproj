@@ -2,6 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Pooria M.</Authors>
+        <RepositoryUrl>https://github.com/pMonfared/OpenDataRdwNL</RepositoryUrl>
+        <Title>Connect to API Opendata RWD Netherland   https://opendata.rdw.nl/</Title>
     </PropertyGroup>
 
 </Project>

@@ -16,10 +16,8 @@ namespace OpenDataRdwNL.Sdk.Utility
             {
                 case ResourceType.Json:
                     return ".json";
-                    break;
                 case ResourceType.Csv:
                     return ".csv";
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(resourceType), resourceType, null);
             }

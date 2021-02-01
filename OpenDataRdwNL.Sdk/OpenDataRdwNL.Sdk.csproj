@@ -2,6 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>.Net Core opendatarwd.nl Car information by LicensePlate</Title>
+        <Authors>Pooria M</Authors>
+        <Description>Connect to API Opendata RWD Netherland   https://opendata.rdw.nl/</Description>
+        <PackageTags>opendatardw,.net core</PackageTags>
+        <RepositoryUrl>https://github.com/pMonfared/OpenDataRdwNL</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
