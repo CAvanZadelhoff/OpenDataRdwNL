@@ -9,7 +9,7 @@ you must signup and get your specially token from https://opendata.rdw.nl/profil
 
 Install NugetPackage:
 ```
-Install-Package OpenDataRdwNL.Sdk -Version 1.1.0
+Install-Package OpenDataRdwNL.Sdk -Version 1.1.1
 ```
 
 
