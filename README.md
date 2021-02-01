@@ -13,6 +13,8 @@ Install-Package OpenDataRdwNL.Sdk -Version 1.1.0
 ```
 
 
+Add to Startup.cs
+
 ```
 public void ConfigureServices(IServiceCollection services)
 {
