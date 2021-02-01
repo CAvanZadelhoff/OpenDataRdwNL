@@ -7,6 +7,12 @@ This library offer services include:
 Get Car detail by license plate number in Netherland
 you must signup and get your specially token from https://opendata.rdw.nl/profile/edit/developer_settings
 
+Install NugetPackage:
+```
+Install-Package OpenDataRdwNL.Sdk -Version 1.1.0
+```
+
+
 ```
 public void ConfigureServices(IServiceCollection services)
 {
