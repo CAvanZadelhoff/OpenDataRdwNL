@@ -18,18 +18,19 @@ namespace OpenDataRdwNL.Sdk.ApiProviders
         private readonly ISodaRequestHelper _sodaRequest;
         private readonly ISodaQueryHelper _sodaQuery;
         private readonly ISodaTokenHelper _sodaToken;
-        
-        public OpenDataRdwNlApiProvider(OpenDataRdwNlOptions dataRdwNlOptions, ISodaRequestHelper sodaRequest, ISodaQueryHelper sodaQuery, ISodaTokenHelper sodaToken)
+
+        public OpenDataRdwNlApiProvider(OpenDataRdwNlOptions dataRdwNlOptions, ISodaRequestHelper sodaRequest,
+            ISodaQueryHelper sodaQuery, ISodaTokenHelper sodaToken)
         {
             _sodaRequest = sodaRequest;
             _sodaQuery = sodaQuery;
             _sodaToken = sodaToken;
             _serviceAddress = dataRdwNlOptions.OpenDataRdwNlServiceAddress ??
-                                 throw new ArgumentNullException(nameof(dataRdwNlOptions.OpenDataRdwNlServiceAddress));
+                              throw new ArgumentNullException(nameof(dataRdwNlOptions.OpenDataRdwNlServiceAddress));
 
             _appToken = dataRdwNlOptions.AppToken ?? throw new ArgumentNullException("AppToken");
         }
-        
+
         public async Task<CarDetailProviderResult> GetCarDetailByLicensePlate(string licensePlate,ResourceType resourceType = ResourceType.Json,int limit = 5)
         {
             if (licensePlate == null)

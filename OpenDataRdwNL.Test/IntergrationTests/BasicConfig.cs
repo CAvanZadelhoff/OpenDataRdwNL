@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using OpenDataRdwNL.Models;
 using OpenDataRdwNL.Sdk.ApiProviders;
 using OpenDataRdwNL.Sdk.ApiProviders.Contracts;
@@ -14,7 +15,9 @@ namespace OpenDataRdwNL.Test.IntergrationTests
 {
     public class BasicConfig
     {
-        protected readonly IOpenDataRdwNlService SdkService;
+        protected readonly IOpenDataRdwNlService SdkServiceNl;
+        protected readonly IOpenDataRdwEnService SdkServiceEn;
+        protected readonly OpenDataRdwNlOptions OptionsMonitor;
 
         protected BasicConfig()
         {
@@ -29,11 +32,10 @@ namespace OpenDataRdwNL.Test.IntergrationTests
             
             var host = hostBuilder.Start();
             var testClient = host.GetTestClient();
-            var configOptions = new OpenDataRdwNlOptions()
+            OptionsMonitor = new OpenDataRdwNlOptions()
             {
                 AppToken = "<Add_YOUR_APP_TOKEN>",
-                OpenDataRdwNlServiceAddress = "https://opendata.rdw.nl",
-                OpenDataRdwNlLanguage = OpenDataRdwNlLanguage.En
+                OpenDataRdwNlServiceAddress = "https://opendata.rdw.nl"
             };
 
             ISodaResourceHelper sodaResourceHelper = new SodaResourceHelper();
@@ -41,9 +43,10 @@ namespace OpenDataRdwNL.Test.IntergrationTests
             ISodaRequestHelper sodaRequestHelper = new SodaRequestHelper(sodaResourceHelper);
             ISodaTokenHelper sodaTokenHelper = new SodaTokenHelper();
             IOpenDataRdwNlApiProvider apiProvider =
-                new OpenDataRdwNlApiProvider(configOptions, sodaRequestHelper, sodaQueryHelper, sodaTokenHelper);
+                new OpenDataRdwNlApiProvider(OptionsMonitor, sodaRequestHelper, sodaQueryHelper, sodaTokenHelper);
             
-            SdkService = new OpenDataRdwNlService(configOptions,apiProvider);
+            SdkServiceNl = new OpenDataRdwNlService(apiProvider);
+            SdkServiceEn = new OpenDataRdwEnService(apiProvider);
         }
     }
 }

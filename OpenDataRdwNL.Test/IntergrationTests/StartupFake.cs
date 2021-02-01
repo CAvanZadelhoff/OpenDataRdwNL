@@ -24,9 +24,8 @@ namespace OpenDataRdwNL.Test.IntergrationTests
         {
             services.AddOpenDataRdwNlServices(opt =>
             {
-                opt.AppToken = "NeFe3Tst7DTa8DgAWkDFIVwfs";
+                opt.AppToken = "<Add_YOUR_APP_TOKEN>";
                 opt.OpenDataRdwNlServiceAddress = "https://opendata.rdw.nl";
-                opt.OpenDataRdwNlLanguage = OpenDataRdwNlLanguage.En;
             });
         }
 

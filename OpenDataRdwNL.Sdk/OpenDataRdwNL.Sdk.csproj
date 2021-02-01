@@ -8,6 +8,7 @@
         <Description>Connect to API Opendata RWD Netherland   https://opendata.rdw.nl/</Description>
         <PackageTags>opendatardw,.net core</PackageTags>
         <RepositoryUrl>https://github.com/pMonfared/OpenDataRdwNL</RepositoryUrl>
+        <PackageVersion>1.1.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
