@@ -10,7 +10,7 @@ namespace OpenDataRdwNL.Models.ServiceResults
         public string BodyworkTypeEuropeanDescription { get; set; }
         public CarVehicleBodyWorkDetailEnServiceResult(CarVehicleBodyWorkDetailApiResponse ap)
         {
-            LicensePlate = ap.kentaken;
+            LicensePlate = ap.kenteken;
             BodyworkSequenceNumber = ap.carrosserie_volgnummer;
             BodyType = ap.carrosserietype;
             BodyworkTypeEuropeanDescription = ap.type_carrosserie_europese_omschrijving;
