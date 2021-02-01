@@ -9,16 +9,19 @@ using OpenDataRdwNL.Sdk.Services.Contracts;
 
 namespace OpenDataRdwNL.Sdk.Services
 {
-    public class OpenDataRdwNlService : IOpenDataRdwNlService
+    public class OpenDataRdwEnService : IOpenDataRdwEnService
     {
+        
         private readonly IOpenDataRdwNlApiProvider _dataRdwNlApiProvider;
 
-        public OpenDataRdwNlService(IOpenDataRdwNlApiProvider dataRdwNlApiProvider)
+        public OpenDataRdwEnService(
+            IOpenDataRdwNlApiProvider dataRdwNlApiProvider)
         {
+            
             _dataRdwNlApiProvider = dataRdwNlApiProvider;
         }
 
-        public async Task<List<CarDetailNlServiceResult>> GetCarDetailByLicensePlate(string licensePlate)
+        public async Task<List<CarDetailEnServiceResult>> GetCarDetailByLicensePlate(string licensePlate)
         {
             var apiProviderResult = await _dataRdwNlApiProvider.GetCarDetailByLicensePlate(licensePlate);
 
@@ -29,12 +32,12 @@ namespace OpenDataRdwNL.Sdk.Services
                 throw new ArgumentNullException($"apiProviderResult.Response");
 
             return !apiProviderResult.Response.Any()
-                ? new List<CarDetailNlServiceResult>()
+                ? new List<CarDetailEnServiceResult>()
                 : apiProviderResult.Response.Select(p =>
-                    new CarDetailNlServiceResult(p)).ToList();
+                    new CarDetailEnServiceResult(p)).ToList();
         }
 
-        public async Task<List<CarFuelTypeDetailNlServiceResult>> GetCarFuelTypeDetailByLicensePlate(string licensePlate)
+        public async Task<List<CarFuelTypeDetailEnServiceResult>> GetCarFuelTypeDetailByLicensePlate(string licensePlate)
         {
             var apiProviderResult = await _dataRdwNlApiProvider.GetCarFuelTypeDetailByLicensePlate(licensePlate);
 
@@ -45,12 +48,12 @@ namespace OpenDataRdwNL.Sdk.Services
                 throw new ArgumentNullException($"apiProviderResult.Response");
 
             return !apiProviderResult.Response.Any()
-                ? new List<CarFuelTypeDetailNlServiceResult>()
+                ? new List<CarFuelTypeDetailEnServiceResult>()
                 : apiProviderResult.Response.Select(p =>
-                    new CarFuelTypeDetailNlServiceResult(p)).ToList();
+                    new CarFuelTypeDetailEnServiceResult(p)).ToList();
         }
         
-        public async Task<List<CarVehicleBodyWorkDetailNlServiceResult>> GetCarVehicleBodyWorkDetailByLicensePlate(string licensePlate)
+        public async Task<List<CarVehicleBodyWorkDetailEnServiceResult>> GetCarVehicleBodyWorkDetailByLicensePlate(string licensePlate)
         {
             var apiProviderResult = await _dataRdwNlApiProvider.GetCarVehicleBodyWorkDetailByLicensePlate(licensePlate);
 
@@ -61,9 +64,9 @@ namespace OpenDataRdwNL.Sdk.Services
                 throw new ArgumentNullException($"apiProviderResult.Response");
 
             return !apiProviderResult.Response.Any()
-                ? new List<CarVehicleBodyWorkDetailNlServiceResult>()
+                ? new List<CarVehicleBodyWorkDetailEnServiceResult>()
                 : apiProviderResult.Response.Select(p =>
-                    new CarVehicleBodyWorkDetailNlServiceResult(p)).ToList();
+                    new CarVehicleBodyWorkDetailEnServiceResult(p)).ToList();
         }
     }
 }

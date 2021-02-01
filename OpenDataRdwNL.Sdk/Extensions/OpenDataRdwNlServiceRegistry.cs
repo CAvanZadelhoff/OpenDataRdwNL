@@ -22,13 +22,14 @@ namespace OpenDataRdwNL.Sdk.Extensions
             
             services.Configure<OpenDataRdwNlOptions>(action);
 
-            services.AddSingleton<ISodaResourceHelper, SodaResourceHelper>();
-            services.AddSingleton<ISodaQueryHelper, SodaQueryHelper>();
-            services.AddSingleton<ISodaRequestHelper, SodaRequestHelper>();
-            services.AddSingleton<ISodaTokenHelper, SodaTokenHelper>();
-            
-            services.AddHttpClient<IOpenDataRdwNlApiProvider, OpenDataRdwNlApiProvider>();
-            services.AddSingleton<IOpenDataRdwNlService, OpenDataRdwNlService>();
+            services.AddScoped<ISodaResourceHelper, SodaResourceHelper>();
+            services.AddScoped<ISodaQueryHelper, SodaQueryHelper>();
+            services.AddScoped<ISodaRequestHelper, SodaRequestHelper>();
+            services.AddScoped<ISodaTokenHelper, SodaTokenHelper>();
+            services.AddHttpClient();
+            services.AddScoped<IOpenDataRdwNlApiProvider, OpenDataRdwNlApiProvider>();
+            services.AddScoped<IOpenDataRdwNlService, OpenDataRdwNlService>();
+            services.AddScoped<IOpenDataRdwEnService, OpenDataRdwEnService>();
         }
     }
 }

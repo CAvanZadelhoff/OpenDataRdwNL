@@ -12,8 +12,7 @@ public void ConfigureServices(IServiceCollection services)
 {
   services.AddOpenDataRdwNlServices(opt =>
   {
-      opt.AppToken = "NeFe3Tst7DTa8DgAWkDFIVwfs";
-      opt.OpenDataRdwNlLanguage = OpenDataRdwNlLanguage.En;
+      opt.AppToken = "<Add_YOUR_APP_TOKEN>";
       opt.OpenDataRdwNlServiceAddress = "https://opendata.rdw.nl";
   });
   
@@ -21,7 +20,31 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-use in apiController:
+use (English version) in  apiController:
+```
+[ApiController]
+[Route("/api/[controller]")]
+[Produces("application/json")]
+public class OpenDataRdwController : ControllerBase
+{
+    private readonly IOpenDataRdwEnService _dataRdwEnService;
+        
+    public OpenDataRdwController(IOpenDataRdwEnService dataRdwEnService)
+    {
+       _dataRdwEnService = dataRdwEnService;
+    }
+        
+    [HttpGet("[action]")]
+    [ProducesResponseType(typeof(List<CarDetailEnServiceResult>), 200)]
+    public async Task<IActionResult> CarDetail([FromQuery] string licensePlate)
+    {
+        var models = await _dataRdwEnService.GetCarDetailByLicensePlate(licensePlate);
+        return Ok(models);
+     }
+}
+```
+
+use (Dutch version) in  apiController:
 ```
 [ApiController]
 [Route("/api/[controller]")]
@@ -35,9 +58,8 @@ public class OpenDataRdwController : ControllerBase
        _dataRdwNlService = dataRdwNlService;
     }
         
-        
     [HttpGet("[action]")]
-    [ProducesResponseType(typeof(List<CarDetailServiceResult>), 200)]
+    [ProducesResponseType(typeof(List<CarDetailNlServiceResult>), 200)]
     public async Task<IActionResult> CarDetail([FromQuery] string licensePlate)
     {
         var models = await _dataRdwNlService.GetCarDetailByLicensePlate(licensePlate);
