@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDataRdwNL.Models", "OpenDataRdwNL.Models\OpenDataRdwNL.Models.csproj", "{9E2AA2C1-EBE2-4103-BAD6-84C3A2C57921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDataRdwNL.Sdk", "OpenDataRdwNL.Sdk\OpenDataRdwNL.Sdk.csproj", "{0BE63AFE-05EA-4628-944E-B5A1AB11A097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDataRdwNL.Test", "OpenDataRdwNL.Test\OpenDataRdwNL.Test.csproj", "{4AD5A777-AA3D-4588-AE10-980128183D38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E2AA2C1-EBE2-4103-BAD6-84C3A2C57921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2AA2C1-EBE2-4103-BAD6-84C3A2C57921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2AA2C1-EBE2-4103-BAD6-84C3A2C57921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2AA2C1-EBE2-4103-BAD6-84C3A2C57921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE63AFE-05EA-4628-944E-B5A1AB11A097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE63AFE-05EA-4628-944E-B5A1AB11A097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE63AFE-05EA-4628-944E-B5A1AB11A097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE63AFE-05EA-4628-944E-B5A1AB11A097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD5A777-AA3D-4588-AE10-980128183D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD5A777-AA3D-4588-AE10-980128183D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD5A777-AA3D-4588-AE10-980128183D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD5A777-AA3D-4588-AE10-980128183D38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
