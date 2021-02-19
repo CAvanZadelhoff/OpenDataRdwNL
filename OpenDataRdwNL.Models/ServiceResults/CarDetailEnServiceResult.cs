@@ -36,6 +36,24 @@ namespace OpenDataRdwNL.Models.ServiceResults
         public string TaxiIndicator { get; set; }
         public int MaximumMassComposition { get; set; }
         
+        public int ExpiryDateMot { get; set; }
+        
+        public int NumberOfSeats { get; set; }
+        
+        public int AmountOfCilinders { get; set; }
+        
+        public int MassRoadworthy { get; set; }
+        
+        public int MaximumMassPullingUnbraked { get; set; }
+        public int MaximumPullingMassBraked { get; set; }
+        public string EnergyLabel { get; set; }
+        
+        public string TypeApprovalNumber { get; set; }
+        public string Variant { get; set; }
+        public string Performance { get; set; }
+        public decimal PowerReadyForUse { get; set; }
+        public int NumberOfWheelchairSpaces { get; set; }
+        
         public CarDetailEnServiceResult(CarDetailApiResponse ap)
         {
             LicensePlate = ap.kenteken;
@@ -69,6 +87,24 @@ namespace OpenDataRdwNL.Models.ServiceResults
             PendingRecallIndicator = ap.openstaande_terugroepactie_indicator;
             TaxiIndicator = ap.taxi_indicator;
             MaximumMassComposition = ap.maximum_massa_samenstelling;
+            
+            ExpiryDateMot = ap.vervaldatum_apk;
+
+            NumberOfSeats = ap.aantal_zitplaatsen;
+
+            AmountOfCilinders = ap.aantal_cilinders;
+
+            MassRoadworthy = ap.massa_rijklaar;
+
+            MaximumMassPullingUnbraked = ap.maximum_massa_trekken_ongeremd;
+            MaximumPullingMassBraked = ap.maximum_trekken_massa_geremd;
+            EnergyLabel = ap.zuinigheidslabel;
+
+            TypeApprovalNumber = ap.typegoedkeuringsnummer;
+            Variant = ap.variant;
+            Performance = ap.uitvoering;
+            PowerReadyForUse = ap.vermogen_massarijklaar;
+            NumberOfWheelchairSpaces = ap.aantal_rolstoelplaatsen;
         }
     }
 }
