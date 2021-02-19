@@ -12,7 +12,7 @@ namespace OpenDataRdwNL.Test.IntergrationTests
         [Fact,Order(1)]
         public async Task Test01_GetCarDetailList_By_LicensePlate_Should_ReturnOk_FilledList()
         {
-            var response = await SdkServiceNl.GetCarDetailByLicensePlate("WJTH78");
+            var response = await SdkServiceNl.GetCarDetailByLicensePlate("63SKNH");
             
             response.Should().NotBeNull();
             response.Count.Should().Be(1);

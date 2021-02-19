@@ -35,6 +35,26 @@ namespace OpenDataRdwNL.Models.ServiceResults
         public string OpenstaandeTerugroepactieIndicator { get; set; }
         public string TaxiIndicator { get; set; }
         public int MaximumMassaSamenstelling { get; set; }
+        
+        public int VervaldatumApk { get; set; }
+        
+        public int AantalZitplaatsen { get; set; }
+        
+        public int AantalCilinders { get; set; }
+        
+        public int MassaRijklaar { get; set; }
+        
+        public int MaximumMassaTrekkenOngeremd { get; set; }
+        public int MaximumTrekkenMassaGeremd { get; set; }
+        public string Zuinigheidslabel { get; set; }
+        
+        public string Typegoedkeuringsnummer { get; set; }
+        public string Variant { get; set; }
+        public string Uitvoering { get; set; }
+        public decimal VermogenMassarijklaar { get; set; }
+        public int AantalRolstoelplaatsen { get; set; }
+
+
 
         public CarDetailNlServiceResult(CarDetailApiResponse ap)
         {
@@ -69,6 +89,23 @@ namespace OpenDataRdwNL.Models.ServiceResults
             OpenstaandeTerugroepactieIndicator = ap.openstaande_terugroepactie_indicator;
             TaxiIndicator = ap.taxi_indicator;
             MaximumMassaSamenstelling = ap.maximum_massa_samenstelling;
+            VervaldatumApk = ap.vervaldatum_apk;
+
+            AantalZitplaatsen = ap.aantal_zitplaatsen;
+
+            AantalCilinders = ap.aantal_cilinders;
+
+            MassaRijklaar = ap.massa_rijklaar;
+
+            MaximumMassaTrekkenOngeremd = ap.maximum_massa_trekken_ongeremd;
+            MaximumTrekkenMassaGeremd = ap.maximum_trekken_massa_geremd;
+            Zuinigheidslabel = ap.zuinigheidslabel;
+
+            Typegoedkeuringsnummer = ap.typegoedkeuringsnummer;
+            Variant = ap.variant;
+            Uitvoering = ap.uitvoering;
+            VermogenMassarijklaar = ap.vermogen_massarijklaar;
+            AantalRolstoelplaatsen = ap.aantal_rolstoelplaatsen;
         }
     }
 }

@@ -6,6 +6,18 @@
         public string voertuigsoort{ get; set; }
         public string merk{ get; set; }
         public string handelsbenaming{ get; set; }
+        
+        public int vervaldatum_apk { get; set; }
+        
+        public int aantal_zitplaatsen { get; set; }
+        
+        public int aantal_cilinders { get; set; }
+        
+        public int massa_rijklaar { get; set; }
+        
+        public int maximum_massa_trekken_ongeremd { get; set; }
+        public int maximum_trekken_massa_geremd { get; set; }
+        public string zuinigheidslabel { get; set; }
         public int datum_tenaamstelling{ get; set; }
         public int bruto_bpm { get; set; }
         public string inrichting{ get; set; }
@@ -27,11 +39,16 @@
         public string europese_voertuigcategorie{ get; set; }
         public string plaats_chassisnummer{ get; set; }
         public int technische_max_massa_voertuig{ get; set; }
+        public string typegoedkeuringsnummer { get; set; }
+        public string variant { get; set; }
+        public string uitvoering { get; set; }
         public int volgnummer_wijziging_eu_typegoedkeuring{ get; set; }
+        public decimal vermogen_massarijklaar { get; set; }
         public int wielbasis{ get; set; }
         public string export_indicator{ get; set; }
         public string openstaande_terugroepactie_indicator{ get; set; }
         public string taxi_indicator{ get; set; }
         public int maximum_massa_samenstelling{ get; set; }
+        public int aantal_rolstoelplaatsen { get; set; }
     }
 }
