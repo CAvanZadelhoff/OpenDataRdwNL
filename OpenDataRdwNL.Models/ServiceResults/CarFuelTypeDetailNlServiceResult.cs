@@ -13,7 +13,7 @@ namespace OpenDataRdwNL.Models.ServiceResults
         public int ActieRadiusExternOpladenWltp { get; set; }
         public int ActieRadiusExternOpladenStadWltp { get; set; }
         public int MaxVermogen60Minuten { get; set; }
-        public int NettoMaxVermogenElektrisch { get; set; }
+        public decimal NettoMaxVermogenElektrisch { get; set; }
         public string KlasseHybrideElektrischVoertuig { get; set; }
         public CarFuelTypeDetailNlServiceResult(CarFuelTypeDetailApiResponse ap)
         {

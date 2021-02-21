@@ -23,7 +23,7 @@ namespace OpenDataRdwNL.Test.IntergrationTests
         [Fact,Order(2)]
         public async Task Test02_GetCarFuelTypeDetailList_By_LicensePlate_Should_ReturnOk_FilledList()
         {
-            var response = await SdkServiceEn.GetCarFuelTypeDetailByLicensePlate("TK098V");
+            var response = await SdkServiceEn.GetCarFuelTypeDetailByLicensePlate("ZS202T");
             
             response.Should().NotBeNull();
             response.Count.Should().Be(3);
