@@ -11,7 +11,7 @@
         public int actie_radius_extern_opladen_wltp { get; set; }
         public int actie_radius_extern_opladen_stad_wltp { get; set; }
         public int max_vermogen_60_minuten { get; set; }
-        public int netto_max_vermogen_elektrisch { get; set; }
+        public decimal netto_max_vermogen_elektrisch { get; set; }
         public string klasse_hybride_elektrisch_voertuig { get; set; }
     }
 }
