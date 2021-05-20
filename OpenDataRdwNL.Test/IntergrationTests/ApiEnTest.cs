@@ -26,7 +26,7 @@ namespace OpenDataRdwNL.Test.IntergrationTests
             var response = await SdkServiceEn.GetCarFuelTypeDetailByLicensePlate("ZS202T");
             
             response.Should().NotBeNull();
-            response.Count.Should().Be(3);
+            response.Count.Should().Be(2);
         }
         #endregion
         
