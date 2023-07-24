@@ -1,4 +1,4 @@
-﻿namespace OpenDataRdwNL.Models.ApiResponses
+namespace OpenDataRdwNL.Models.ApiResponses
 {
     public class CarFuelTypeDetailApiResponse
     {
