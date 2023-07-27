@@ -1,54 +1,105 @@
-﻿namespace OpenDataRdwNL.Models.ApiResponses
+﻿using System;
+
+namespace OpenDataRdwNL.Models.ApiResponses
 {
     public class CarDetailApiResponse
     {
         public string kenteken { get; set; }
-        public string voertuigsoort{ get; set; }
-        public string merk{ get; set; }
-        public string handelsbenaming{ get; set; }
-        
+        public string voertuigsoort { get; set; }
+        public string merk { get; set; }
+        public string handelsbenaming { get; set; }
         public int vervaldatum_apk { get; set; }
-        
+        public int datum_tenaamstelling { get; set; }
+        public int bruto_bpm { get; set; }
+        public string inrichting { get; set; }
         public int aantal_zitplaatsen { get; set; }
-        
+        public string eerste_kleur { get; set; }
+        public string tweede_kleur { get; set; }
         public int aantal_cilinders { get; set; }
-        
+        public int cilinderinhoud { get; set; }
+        public int massa_ledig_voertuig { get; set; }
+        public int toegestane_maximum_massa_voertuig { get; set; }
         public int massa_rijklaar { get; set; }
-        
         public int maximum_massa_trekken_ongeremd { get; set; }
         public int maximum_trekken_massa_geremd { get; set; }
-        public string zuinigheidslabel { get; set; }
-        public int datum_tenaamstelling{ get; set; }
-        public int bruto_bpm { get; set; }
-        public string inrichting{ get; set; }
-        public string eerste_kleur{ get; set; }
-        public string tweede_kleur{ get; set; }
-        public int massa_ledig_voertuig{ get; set; }
-        public int toegestane_maximum_massa_voertuig{ get; set; }
-        public int datum_eerste_toelating{ get; set; }
-        public int datum_eerste_afgifte_nederland{ get; set; }
-        public string wacht_op_keuren{ get; set; }
-        public string wam_verzekerd{ get; set; }
-        public int  laadvermogen{ get; set; }
-        public int aantal_deuren{ get; set; }
-        public int aantal_wielen{ get; set; }
-        public int afstand_hart_koppeling_tot_achterzijde_voertuig{ get; set; }
-        public int afstand_voorzijde_voertuig_tot_hart_koppeling{ get; set; }
-        public int lengte{ get; set; }
-        public int breedte{ get; set; }
-        public string europese_voertuigcategorie{ get; set; }
-        public string plaats_chassisnummer{ get; set; }
-        public int technische_max_massa_voertuig{ get; set; }
+        public int datum_eerste_toelating { get; set; }
+        public int datum_eerste_tenaamstelling_in_nederland { get; set; }
+        public string wacht_op_keuren { get; set; }
+        public int catalogusprijs { get; set; }
+        public string wam_verzekerd { get; set; }
+        public int maximale_constructiesnelheid { get; set; }
+        public int laadvermogen { get; set; }
+        public int oplegger_geremd { get; set; }
+        public int aanhangwagen_autonoom_geremd { get; set; }
+        public int aanhangwagen_middenas_geremd { get; set; }
+        public int aantal_staanplaatsen { get; set; }
+        public int aantal_deuren { get; set; }
+        public int aantal_wielen { get; set; }
+        public int afstand_hart_koppeling_tot_achterzijde_voertuig { get; set; }
+        public int afstand_voorzijde_voertuig_tot_hart_koppeling { get; set; }
+        public int afwijkende_maximum_snelheid { get; set; }
+        public int lengte { get; set; }
+        public int breedte { get; set; }
+        public string europese_voertuigcategorie { get; set; }
+        public string europese_voertuigcategorie_toevoeging { get; set; }
+        public string europese_uitvoeringcategorie_toevoeging { get; set; }
+        public string plaats_chassisnummer { get; set; }
+        public int technische_max_massa_voertuig { get; set; }
+        public string type { get; set; }
+        public string type_gasinstallatie { get; set; }
         public string typegoedkeuringsnummer { get; set; }
         public string variant { get; set; }
         public string uitvoering { get; set; }
-        public int volgnummer_wijziging_eu_typegoedkeuring{ get; set; }
+        public int volgnummer_wijziging_eu_typegoedkeuring { get; set; }
         public decimal vermogen_massarijklaar { get; set; }
-        public int wielbasis{ get; set; }
-        public string export_indicator{ get; set; }
-        public string openstaande_terugroepactie_indicator{ get; set; }
-        public string taxi_indicator{ get; set; }
-        public int maximum_massa_samenstelling{ get; set; }
+        public int wielbasis { get; set; }
+        public string export_indicator { get; set; }
+        public string openstaande_terugroepactie_indicator { get; set; }
+        public int vervaldatum_tachograaf { get; set; }
+        public string taxi_indicator { get; set; }
+        public int maximum_massa_samenstelling { get; set; }
         public int aantal_rolstoelplaatsen { get; set; }
+        public decimal maximum_ondersteunende_snelheid { get; set; }
+        public int jaar_laatste_registratie_tellerstand { get; set; }
+        public string tellerstandoordeel { get; set; }
+        public string code_toelichting_tellerstandoordeel { get; set; }
+        public string tenaamstellen_mogelijk { get; set; }
+        public DateTime vervaldatum_apk_dt { get; set; }
+        public DateTime datum_tenaamstelling_dt { get; set; }
+        public DateTime datum_eerste_toelating_dt { get; set; }
+        public DateTime datum_eerste_tenaamstelling_in_nederland_dt { get; set; }
+        public DateTime vervaldatum_tachograaf_dt { get; set; }
+        public int maximum_last_onder_de_vooras_sen_tezamen_koppeling { get; set; }
+        public string type_remsysteem_voertuig_code { get; set; }
+        public string rupsonderstelconfiguratiecode { get; set; }
+        public int wielbasis_voertuig_minimum { get; set; }
+        public int wielbasis_voertuig_maximum { get; set; }
+        public int lengte_voertuig_minimum { get; set; }
+        public int lengte_voertuig_maximum { get; set; }
+        public int breedte_voertuig_minimum { get; set; }
+        public int breedte_voertuig_maximum { get; set; }
+        public int hoogte_voertuig { get; set; }
+        public int hoogte_voertuig_minimum { get; set; }
+        public int hoogte_voertuig_maximum { get; set; }
+        public int massa_bedrijfsklaar_minimaal { get; set; }
+        public int massa_bedrijfsklaar_maximaal { get; set; }
+        public int technisch_toelaatbaar_massa_koppelpunt { get; set; }
+        public int maximum_massa_technisch_maximaal { get; set; }
+        public int maximum_massa_technisch_minimaal { get; set; }
+        public string subcategorie_nederland { get; set; }
+        public int verticale_belasting_koppelpunt_getrokken_voertuig { get; set; }
+        public string zuinigheidsclassificatie { get; set; }
+        public int registratie_datum_goedkeuring_afschrijvingsmoment_bpm { get; set; }
+        public DateTime registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt { get; set; }
+        public int gem_lading_wrde { get; set; }
+        public string aerodyn_voorz { get; set; }
+        public int massa_alt_aandr { get; set; }
+        public string verl_cab_ind { get; set; }
+
+        public string api_gekentekende_voertuigen_assen { get; set; }
+        public string api_gekentekende_voertuigen_brandstof { get; set; }
+        public string api_gekentekende_voertuigen_carrosserie { get; set; }
+        public string api_gekentekende_voertuigen_carrosserie_specifiek { get; set; }
+        public string api_gekentekende_voertuigen_voertuigklasse { get; set; }
     }
 }
